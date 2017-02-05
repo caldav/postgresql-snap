@@ -12,96 +12,129 @@ grade: stable
 apps:
   initialize:
        command: usr/bin/wrapper-initialize
+       aliases: [initialize]
   clusterdb:
        command: usr/bin/clusterdb
        plugs: [network]
+       aliases: [clusterdb]
   createdb:
        command: usr/bin/createdb
        plugs: [network]
+       aliases: [createdb]
   createlang:
        command: usr/bin/createlang
        plugs: [network]
+       aliases: [createlang]
   createuser:
        command: usr/bin/createuser
        plugs: [network]
+       aliases: [createuser]
   dropdb:
        command: usr/bin/dropdb
        plugs: [network]
+       aliases: [dropdb]
   droplang:
        command: usr/bin/droplang
        plugs: [network]
+       aliases: [droplang]
   dropuser:
        command: usr/bin/dropuser
        plugs: [network]
+       aliases: [dropuser]
   ecpg:
        command: usr/bin/ecpg
+       aliases: [ecpg]
   initdb:
        command: usr/bin/initdb
+       aliases: [initdb]
   pgarchivecleanup:
        command: usr/bin/pg_archivecleanup
+       aliases: [pgarchivecleanup]
   pgbasebackup:
        command: usr/bin/pg_basebackup
        plugs: [network]
+       aliases: [pgbasebackup]
   pgbench:
        command: usr/bin/pgbench
        plugs: [network]
+       aliases: [pgbench]
   pgconfig:
        command: usr/bin/pg_config
+       aliases: [pgconfig]
   pgcontroldata:
        command: usr/bin/pg_controldata
+       aliases: [pgcontroldata]
   pgctl:
        command: usr/bin/wrapper-pg_ctl
        plugs:
           - network
           - network-bind
+          aliases: [pgctl]
   pgdump:
        command: usr/bin/pg_dump
        plugs: [network]
+       aliases: [pgdump]
   pgdumpall:
        command: usr/bin/pg_dumpall
        plugs: [network]
+       aliases: [pgdumpall]
   pgisready:
        command: usr/bin/pg_isready
        plugs: [network]
+       aliases: [pgisready]
   pgreceivexlog:
        command: usr/bin/pg_receivexlog
        plugs: [network]
+       aliases: [pgreceivexlog]
   pgrecvlogical:
        command: usr/bin/pg_recvlogical
        plugs: [network]
+       aliases: [pgrecvlogical]
   pgresetxlog:
        command: usr/bin/pg_resetxlog
+       aliases: [pgresetxlog]
   pgrestore:
        command: usr/bin/pg_restore
        plugs: [network]
+       aliases: [pgrestore]
   pgrewind:
        command: usr/bin/pg_rewind
        plugs: [network]
+       aliases: [pgrewind]
   pgtestfsync:
        command: usr/bin/pg_test_fsync
+       aliases: [pgtestfsync]
   pgtesttiming:
        command: usr/bin/pg_test_timing
+       aliases: [pgtesttiming]
   pgupgrade:
        command: usr/bin/pg_upgrade
+       aliases: [pgupgrade]
   pgxlogdump:
        command: usr/bin/pg_xlogdump
+       aliases: [pgxlogdump]
   postgres:
        command: usr/bin/postgres
        plugs:
          - network
          - network-bind
+         aliases: [postgres]
   postmaster:
        command: usr/bin/postmaster
        plugs: [network]
+       aliases: [postmaster]
   psql:
        command: usr/bin/psql
        plugs: [network]
+       aliases: [psql]
   reindexdb:
        command: usr/bin/reindexdb
        plugs: [network]
+       aliases: [reindexdb]
   vacuumdb:
        command: usr/bin/vacuumdb
        plugs: [network]
+       aliases: [vacuumdb]
   
 parts:
   postgresql:
