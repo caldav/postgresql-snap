@@ -69,7 +69,7 @@ apps:
        plugs:
           - network
           - network-bind
-          aliases: [pgctl]
+       aliases: [pgctl]
   pgdump:
        command: usr/bin/pg_dump
        plugs: [network]
@@ -118,7 +118,7 @@ apps:
        plugs:
          - network
          - network-bind
-         aliases: [postgres]
+       aliases: [postgres]
   postmaster:
        command: usr/bin/postmaster
        plugs: [network]
